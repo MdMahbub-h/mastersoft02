@@ -90,9 +90,9 @@
           document.exitFullscreen();
         }
       });
-
-          container.requestFullscreen();
-       
+ setTimeout(() => {
+        container.requestFullscreen();
+      }, 1000);
       Object.assign(document.body.style, {
         margin: "0",
         padding: "0",
