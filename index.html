@@ -90,7 +90,11 @@
           document.exitFullscreen();
         }
       });
-
+if (!document.fullscreenElement) {
+          container.requestFullscreen();
+        } else if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
       Object.assign(document.body.style, {
         margin: "0",
         padding: "0",
